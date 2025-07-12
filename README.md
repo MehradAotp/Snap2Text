@@ -27,6 +27,8 @@
 
 ### 🛠️ نصب و راه‌اندازی
 
+<div align="left">
+
 ```bash
 # کلون کردن پروژه
 git clone <your-repo-url>
@@ -40,6 +42,8 @@ cp .env.example .env
 # .env را ویرایش کنید
 ```
 
+</div>
+
 ### ⚙️ پیکربندی
 
 فایل `.env` را ایجاد کنید:
@@ -51,6 +55,8 @@ PORT=3000
 
 ### 🚀 اجرای پروژه
 
+<div align="left">
+
 ```bash
 # محیط توسعه
 npm run start:dev
@@ -59,6 +65,8 @@ npm run start:dev
 npm run build
 npm run start:prod
 ```
+
+</div>
 
 ### 📡 API Endpoints
 
@@ -81,6 +89,8 @@ GET /text/languages
 
 ### 💡 مثال‌های استفاده
 
+<div align="left">
+
 ```bash
 # تشخیص متن فارسی
 curl -X POST http://localhost:3000/text/ocr \
@@ -92,6 +102,8 @@ curl -X POST http://localhost:3000/text/ocr \
   -F "image=@sample.jpg" \
   -F "lang=eng"
 ```
+
+</div>
 
 ### 📊 نمونه پاسخ
 
@@ -248,7 +260,7 @@ After running the application, visit:
 بعد از اجرای اپلیکیشن، این آدرس را باز کنید:
 
 ```
-http://localhost:3000/api
+http://localhost:3000/swagger
 ```
 
 ## 🔍 Requirements | پیش‌نیازها
