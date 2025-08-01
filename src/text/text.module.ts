@@ -12,5 +12,6 @@ import { TextDocument, TextSchema } from 'src/database/text.model';
   ],
   providers: [TextService],
   controllers: [TextController],
+  exports: [TextService],
 })
 export class TextModule {}

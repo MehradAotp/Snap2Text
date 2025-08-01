@@ -3,6 +3,7 @@ import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { TextModule } from './text/text.module';
 import { ConfigModule, ConfigService } from '@nestjs/config';
+import { TelegramModule } from './telegram/telegram.module';
 
 @Module({
   imports: [
@@ -18,6 +19,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
       }),
     }),
     TextModule,
+    TelegramModule,
   ],
   controllers: [],
   providers: [],
