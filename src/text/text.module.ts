@@ -6,9 +6,9 @@ import { TextDocument, TextSchema } from 'src/database/text.model';
 
 @Module({
   imports: [
-    MongooseModule.forFeature([
-      { name: TextDocument.name, schema: TextSchema },
-    ]),
+    // MongooseModule.forFeature([
+    //   { name: TextDocument.name, schema: TextSchema },
+    // ]),
   ],
   providers: [TextService],
   controllers: [TextController],

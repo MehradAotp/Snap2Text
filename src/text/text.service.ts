@@ -8,10 +8,9 @@ import * as Tesseract from 'tesseract.js';
 @Injectable()
 export class TextService {
   private readonly logger = new Logger(TextService.name);
-  constructor(
-    @InjectModel(TextDocument.name)
-    private readonly textModel: Model<TextDocument>,
-  ) {}
+  constructor() // @InjectModel(TextDocument.name)
+  // private readonly textModel: Model<TextDocument>,
+  {}
 
   private readonly supportedLanguages = {
     eng: 'English',
@@ -55,19 +54,19 @@ export class TextService {
             'Text is empty, too short, or confidence is low; not saved to DB.',
         };
       }
-      try {
-        const savedText = await this.textModel.create({
-          text: data.text,
-          cleaned: cleanedText,
-          confidence: data.confidence,
-          durationMs: duration,
-          lang,
-          languageName: this.supportedLanguages[lang],
-        });
-        this.logger.log(`Text saved to database with ID: ${savedText._id}`);
-      } catch (dbError) {
-        this.logger.error('Database save error:', dbError);
-      }
+      // try {
+      //   const savedText = await this.textModel.create({
+      //     text: data.text,
+      //     cleaned: cleanedText,
+      //     confidence: data.confidence,
+      //     durationMs: duration,
+      //     lang,
+      //     languageName: this.supportedLanguages[lang],
+      //   });
+      //   this.logger.log(`Text saved to database with ID: ${savedText._id}`);
+      // } catch (dbError) {
+      //   this.logger.error('Database save error:', dbError);
+      // }
 
       return {
         text: data.text,
